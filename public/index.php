@@ -11,27 +11,39 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-meteor"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                <a class="nav-link active" aria-current="page" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Галактика Андромеда</a>
+                <a class="nav-link" href="/andromeda">Галактика Андромеда</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Туманность Ориона</a>
+                <a class="nav-link" href="/orion">Туманность Ориона</a>
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container">
-    <?php print_r($_SERVER["REQUEST_URI"]) ?>
+        <?php 
+        $url = $_SERVER["REQUEST_URI"];
+
+        echo "Вы на странице: $url, будьте внимательны!<br>";
+
+        if ($url == "/") {
+            require "views/main.php";
+        } elseif ($url == "/andromeda") {
+            require "views/andromeda.php";
+        } elseif ($url == "/orion") {
+            require "views/orion.php";
+        } 
+        ?>
     </div>
 </body>
 </html>
