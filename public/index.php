@@ -21,10 +21,10 @@
                 <a class="nav-link active" aria-current="page" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/andromeda">Галактика Андромеда</a>
+                <a class="nav-link" href="/wheatley">Уитли</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/orion">Туманность Ориона</a>
+                <a class="nav-link" href="/GLaDOS">ГЛэДОС</a>
                 </li>
                 </ul>
             </div>
@@ -38,10 +38,10 @@
 
         if ($url == "/") {
             require "../views/main.php";
-        } elseif ($url == "/andromeda") {
-            require "../views/andromeda.php";
-        } elseif ($url == "/orion") {
-            require "../views/orion.php";
+        } elseif ($url == "/wheatley") {
+            require "../views/wheatley.php";
+        } elseif ($url == "/GLaDOS") {
+            require "../views/GLaDOS.php";
         } 
         ?>
     </div>
