@@ -37,11 +37,11 @@
         echo "Вы на странице: $url, будьте внимательны!<br>";
 
         if ($url == "/") {
-            require "views/main.php";
+            require "../views/main.php";
         } elseif ($url == "/andromeda") {
-            require "views/andromeda.php";
+            require "../views/andromeda.php";
         } elseif ($url == "/orion") {
-            require "views/orion.php";
+            require "../views/orion.php";
         } 
         ?>
     </div>
